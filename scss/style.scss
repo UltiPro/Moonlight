@@ -1,0 +1,11 @@
+@import "_variables.scss";
+@import "_resetCSS.scss";
+
+.backgroundMoonlight {
+    min-width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(0deg, $littleDarkBlue 0%, $darkBlue 50%, $veryDarkBlue 100%);
+    .sun{
+        width: ;
+    }
+}
