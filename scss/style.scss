@@ -1,11 +1,72 @@
 @import "_variables.scss";
+@import "_animations.scss";
 @import "_resetCSS.scss";
 
 .backgroundMoonlight {
-    min-width: 100vw;
-    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
     background: linear-gradient(0deg, $littleDarkBlue 0%, $darkBlue 50%, $veryDarkBlue 100%);
-    .sun{
-        width: ;
+    overflow: hidden;
+
+    .moon {
+        position: absolute;
+        top: 50%;
+        width: $moon;
+        height: $moon;
+        background-color: $white;
+        transform: translate(0, -200%);
+        border-radius: 50%;
+        animation: moonShine $moonShineTime linear infinite, moonMovment $moonMovmentTime ease-in-out infinite;
+        z-index: 2;
+    }
+
+    .mountains .mountain {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: calc($mountain / 2 * (-1) - $mountainRadius);
+        width: $mountain;
+        height: $mountain;
+        border-radius: $mountainRadius;
+        transform: rotate(45deg);
+        box-shadow: 0px 1px 30px 0px rgba($black, 0.5);
+        z-index: 3;
+
+        &:nth-of-type(1) {
+            background: linear-gradient(-45deg, $darkBlue 75%, $blue 100%);
+        }
+
+        &:nth-of-type(2) {
+            left: 50%;
+            background: linear-gradient(-45deg, $darkBlue 85%, $blue 100%);
+            margin-bottom: calc($mountain / 2 * (-1) - calc(3* $mountainRadius));
+        }
+
+        &:nth-of-type(3) {
+            width: $smallMountain;
+            height: $smallMountain;
+            left: 40%;
+            background: linear-gradient(-45deg, $darkBlue 90%, $blue 100%);
+            margin-bottom: calc($smallMountain / 2 * (-1) - $mountainRadius);
+        }
+    }
+
+    .stars .star {
+        position: absolute;
+        width: $star;
+        height: $star;
+        border-radius: 1px;
+        background-color: $white;
+        z-index: 1;
+    }
+
+    @for $i from 1 through 50 {
+        .star:nth-child(#{$i}) {
+            left: random(100) + vw;
+            top: random(60) + vh;
+            animation: starShine+random(3) random(5)+s linear infinite;
+        }
     }
 }

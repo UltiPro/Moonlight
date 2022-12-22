@@ -1,16 +1,21 @@
-$black: rgb(0, 8, 20);
-$red: rgb(230, 57, 70);
-$white: rgb(241, 250, 238);
-$veryDarkBlue: rgb(0, 29, 61);
-$darkBlue: rgb(29, 53, 87);
-$littleDarkBlue: rgb(0, 53, 102);
-$blue: rgb(69, 123, 157);
-$lightBlue: rgb(168, 218, 220);
-$yellow: rgb(255, 195, 0);
-$ligtYellow: rgb(255, 214, 10);
+$black: #000814;
+$red: #e63946;
+$white: #f1faee;
+$veryDarkBlue: #001d3d;
+$darkBlue: #1d3557;
+$littleDarkBlue: #003566;
+$blue: #457b9d;
+$lightBlue: #a8dadc;
+$yellow: #ffc300;
+$lightYellow: #ffd60a;
 
-$sunSize: 24px;
-$sunRays: 5px;
+$moon: 6vw;
+$moonShine: calc($moon / 4);
+$moonShineTime: 3s;
+$moonMovmentTime: 15s;
 
-$starWidth: 1px;
-$starHeight: 1px;
+$star: 1px;
+
+$mountain: 100vh;
+$smallMountain: calc($mountain / 2);
+$mountainRadius: 25px;
