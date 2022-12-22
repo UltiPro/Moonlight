@@ -14,7 +14,6 @@
 
     .moon {
         position: absolute;
-        top: 50%;
         width: $moon;
         height: $moon;
         background-color: $white;
@@ -36,12 +35,12 @@
         z-index: 3;
 
         &:nth-of-type(1) {
-            background: linear-gradient(-45deg, $darkBlue 75%, $blue 100%);
+            background: linear-gradient(-45deg, $grey 75%, $blue 80%, $white 100%);
         }
 
         &:nth-of-type(2) {
             left: 50%;
-            background: linear-gradient(-45deg, $darkBlue 85%, $blue 100%);
+            background: linear-gradient(-45deg, $darkGrey 85%, $blue 90%, $white 100%);
             margin-bottom: calc($mountain / 2 * (-1) - calc(3* $mountainRadius));
         }
 
@@ -49,8 +48,46 @@
             width: $smallMountain;
             height: $smallMountain;
             left: 40%;
-            background: linear-gradient(-45deg, $darkBlue 90%, $blue 100%);
+            background: linear-gradient(-45deg, $lightGrey 85%, $blue 90%, $white 100%);
             margin-bottom: calc($smallMountain / 2 * (-1) - $mountainRadius);
+        }
+    }
+
+    .clouds .cloud {
+        @extend %cloud;
+        width: $cloud;
+        height: calc($cloud / 3);
+        border-radius: calc($cloud / 2);
+        box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+        z-index: 4;
+
+        &::before {
+            @extend %cloudBeforeAfter;
+            width: calc($cloud / 2);
+            height: calc($cloud / 2);
+            top: calc((($cloud / 3) - 10px) * (-1));
+            right: calc($cloud / 10 + 3px);
+        }
+
+        &::after {
+            @extend %cloudBeforeAfter;
+            width: calc($cloud / 3);
+            height: calc($cloud / 3);
+            top: calc((($cloud / 4) - 10px) * (-1));
+            left: calc((($cloud / 4) - 10px));
+        }
+
+        @for $i from 1 through 2 {
+            &:nth-child(#{$i}) {
+                top: calc(20 + 30 / $i) + vh;
+                left: calc(-50 / $i) + vw;
+
+                @if($i==2) {
+                    z-index: 2;
+                }
+
+                animation: cloudMovment calc($moonMovmentTime / 2) linear infinite;
+            }
         }
     }
 
@@ -61,7 +98,24 @@
             &:nth-child(#{$i}) {
                 left: random(100) + vw;
                 top: random(60) + vh;
-                animation: starShine+random(4) random(5)+s linear infinite;
+
+                @if($i % 4==0) {
+                    @extend %starBoxShadow1;
+                }
+
+                @else if($i % 4==1) {
+                    @extend %starBoxShadow2;
+                }
+
+                @else if($i % 4==2) {
+                    @extend %starBoxShadow3;
+                }
+
+                @else {
+                    @extend %starBoxShadow4;
+                }
+
+                animation: starShine+random(2) random(4)+3+s linear infinite;
             }
         }
     }

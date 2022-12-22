@@ -1,21 +1,19 @@
 @mixin randomComet($name, $width, $height) {
     @keyframes #{$name} {
         0% {
-            left: -10vw;
+            transform: translateX(-10vw);
 
             @if($width<0) {
-                left: 110vw;
+                transform: translateX(110vw);
             }
         }
 
         100% {
-            left: $width+vw;
+            transform: translate($width+vw, $height+vh);
 
             @if($width<0) {
-                left: -100vw;
+                transform: translateX(-100vw);
             }
-
-            top: $height+vh;
         }
     }
 }
