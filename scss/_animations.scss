@@ -1,3 +1,5 @@
+@import '_mixim.scss';
+
 @keyframes moonShine {
     0% {
         box-shadow: 0px 0px 20px 5px rgba($white, 0.7);
@@ -81,13 +83,10 @@
     }
 }
 
-@keyframes cometMove {
-    0% {
-        left: -10vw;
-    }
+@include randomComet(cometAnimation1, random(100)+100, random(40));
 
-    100% {
-        left: 110vw;
-        top: 20vh;
-    }
-}
+@include randomComet(cometAnimation2, random(100)+100, random(40));
+
+@include randomComet(cometAnimation3, random(100)+100, random(40));
+
+@include randomComet(reverseCometAdnimation, (random(100)+100)*(-1), random(40));

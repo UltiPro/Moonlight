@@ -1,0 +1,21 @@
+@mixin randomComet($name, $width, $height) {
+    @keyframes #{$name} {
+        0% {
+            left: -10vw;
+
+            @if($width<0) {
+                left: 110vw;
+            }
+        }
+
+        100% {
+            left: $width+vw;
+
+            @if($width<0) {
+                left: -100vw;
+            }
+
+            top: $height+vh;
+        }
+    }
+}
