@@ -52,11 +52,11 @@
     }
 }
 
-@include randomComet(cometAnimation1, random(100)+100, random(40));
+$listOfComet: cometAnimation1, cometAnimation2, cometAnimation3;
 
-@include randomComet(cometAnimation2, random(100)+100, random(40));
-
-@include randomComet(cometAnimation3, random(100)+100, random(40));
+@each $current in $listOfComet {
+    @include randomComet($current, random(100)+100, random(40));
+}
 
 @include randomComet(reverseCometAdnimation, (random(100)+100)*(-1), random(40));
 

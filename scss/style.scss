@@ -2,6 +2,7 @@
 @import "_variables.scss";
 @import "_extensions.scss";
 @import "_animations.scss";
+@import "_functions.scss";
 
 .backgroundMoonlight {
     position: absolute;
@@ -21,6 +22,18 @@
         border-radius: 50%;
         animation: moonShine $moonShineTime linear infinite, moonMovment $moonMovmentTime ease-in-out infinite;
         z-index: 2;
+
+        @media (max-width: 882px) {
+            animation: moonShine $moonShineTime linear infinite, moonMovment calc($moonMovmentTime/2) ease-in-out infinite;
+        }
+
+        @media (max-width: 630px) {
+            animation: moonShine $moonShineTime linear infinite, moonMovment calc($moonMovmentTime/3) ease-in-out infinite;
+        }
+
+        @media (max-width: 410px) {
+            animation: moonShine $moonShineTime linear infinite, moonMovment calc($moonMovmentTime/4) ease-in-out infinite;
+        }
     }
 
     .mountains .mountain {
@@ -36,12 +49,30 @@
 
         &:nth-of-type(1) {
             background: linear-gradient(-45deg, $grey 75%, $blue 80%, $white 100%);
+
+            @media (max-width: 410px) {
+                left: -50%;
+                margin-bottom: calc($mountain / 2 * (-1) - calc(7* $mountainRadius));
+            }
         }
 
         &:nth-of-type(2) {
             left: 50%;
             background: linear-gradient(-45deg, $darkGrey 85%, $blue 90%, $white 100%);
             margin-bottom: calc($mountain / 2 * (-1) - calc(3* $mountainRadius));
+
+            @media (max-width: 882px) {
+                left: 30%;
+                margin-bottom: calc($mountain / 2 * (-1) - calc(6* $mountainRadius));
+            }
+
+            @media (max-width: 630px) {
+                left: -50%;
+            }
+
+            @media (max-width: 410px) {
+                display: none;
+            }
         }
 
         &:nth-of-type(3) {
@@ -50,6 +81,14 @@
             left: 40%;
             background: linear-gradient(-45deg, $lightGrey 85%, $blue 90%, $white 100%);
             margin-bottom: calc($smallMountain / 2 * (-1) - $mountainRadius);
+
+            @media (max-width: 882px) {
+                left: 20%;
+            }
+
+            @media (max-width: 410px) {
+                display: none;
+            }
         }
     }
 
@@ -99,21 +138,7 @@
                 left: random(100) + vw;
                 top: random(60) + vh;
 
-                @if($i % 4==0) {
-                    @extend %starBoxShadow1;
-                }
-
-                @else if($i % 4==1) {
-                    @extend %starBoxShadow2;
-                }
-
-                @else if($i % 4==2) {
-                    @extend %starBoxShadow3;
-                }
-
-                @else {
-                    @extend %starBoxShadow4;
-                }
+                @extend #{getStarBoxShadow(random(4))};
 
                 animation: starShine+random(2) random(4)+3+s linear infinite;
             }
@@ -127,8 +152,20 @@
 
         @for $i from 1 through 3 {
             &:nth-child(#{$i}) {
-                top: random(10)+vh;
+                top: random(10)+5+vh;
                 animation: cometAnimation+#{$i} random(7)+3+s linear infinite;
+
+                @media (max-width: 882px) {
+                    animation: cometAnimation+#{$i} random(5)+3+s linear infinite;
+                }
+
+                @media (max-width: 630px) {
+                    animation: cometAnimation+#{$i} random(3)+2+s linear infinite;
+                }
+
+                @media (max-width: 410px) {
+                    animation: cometAnimation+#{$i} random(1)+1+s linear infinite;
+                }
             }
         }
     }
@@ -137,7 +174,7 @@
         @extend %starCometStyle;
         @extend %ReverseCometShadow;
         background-color: $white;
-        top: random(15)+vh;
+        top: random(15)+5+vh;
         animation: reverseCometAdnimation random(7)+3+s linear infinite;
     }
 }
