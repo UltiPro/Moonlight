@@ -1,0 +1,146 @@
+@import _resetCSS.sass, _variables.sass, _extensions.sass, _animations.sass, _functions.sass
+
+.backgroundMoonlight
+    position: absolute
+    left: 0
+    top: 0
+    width: 100vw
+    height: 100vh
+    background: linear-gradient(0deg, $littleDarkBlue 0%, $darkBlue 50%, $veryDarkBlue 100%)
+    overflow: hidden
+
+    .moon
+        position: absolute
+        width: $moon
+        height: $moon
+        background-color: $white
+        transform: translate(0, -200%)
+        border-radius: 50%
+        animation: moonShine $moonShineTime linear infinite, moonMovment $moonMovmentTime ease-in-out infinite
+        z-index: 2
+
+        @media (max-width: 882px)
+            animation: moonShine $moonShineTime linear infinite, moonMovment calc($moonMovmentTime/2) ease-in-out infinite
+
+        @media (max-width: 630px)
+            animation: moonShine $moonShineTime linear infinite, moonMovment calc($moonMovmentTime/3) ease-in-out infinite
+
+        @media (max-width: 410px)
+            animation: moonShine $moonShineTime linear infinite, moonMovment calc($moonMovmentTime/4) ease-in-out infinite
+
+    .mountains .mountain 
+        position: absolute
+        bottom: 0
+        margin-bottom: calc($mountain / 2 * (-1) - $mountainRadius)
+        width: $mountain
+        height: $mountain
+        border-radius: $mountainRadius
+        transform: rotate(45deg)
+        box-shadow: 0px 1px 30px 0px rgba($black, 0.5)
+        z-index: 3
+
+        &:nth-of-type(1) 
+            background: linear-gradient(-45deg, $grey 75%, $blue 80%, $white 100%)
+
+            @media (max-width: 410px) 
+                left: -50%
+                margin-bottom: calc($mountain / 2 * (-1) - calc(7* $mountainRadius))
+            
+        &:nth-of-type(2) 
+            left: 50%
+            background: linear-gradient(-45deg, $darkGrey 85%, $blue 90%, $white 100%)
+            margin-bottom: calc($mountain / 2 * (-1) - calc(3* $mountainRadius))
+
+            @media (max-width: 882px) 
+                left: 30%
+                margin-bottom: calc($mountain / 2 * (-1) - calc(6* $mountainRadius))
+
+            @media (max-width: 630px) 
+                left: -50%
+
+            @media (max-width: 410px) 
+                display: none
+            
+        &:nth-of-type(3) 
+            width: $smallMountain
+            height: $smallMountain
+            left: 40%
+            background: linear-gradient(-45deg, $lightGrey 85%, $blue 90%, $white 100%)
+            margin-bottom: calc($smallMountain / 2 * (-1) - $mountainRadius)
+
+            @media (max-width: 882px) 
+                left: 20%
+
+            @media (max-width: 410px) 
+                display: none
+
+    .clouds .cloud 
+        @extend %cloud
+        width: $cloud
+        height: calc($cloud / 3)
+        border-radius: calc($cloud / 2)
+        box-shadow: 1px 1px rgba(0, 0, 0, 0.2)
+        z-index: 4
+
+        &::before 
+            @extend %cloudBeforeAfter
+            width: calc($cloud / 2)
+            height: calc($cloud / 2)
+            top: calc((($cloud / 3) - 10px) * (-1))
+            right: calc($cloud / 10 + 3px)
+
+        &::after 
+            @extend %cloudBeforeAfter
+            width: calc($cloud / 3)
+            height: calc($cloud / 3)
+            top: calc((($cloud / 4) - 10px) * (-1))
+            left: calc((($cloud / 4) - 10px))
+
+        @for $i from 1 through 2 
+            &:nth-child(#{$i}) 
+                top: calc(20 + 30 / $i) + vh
+                left: calc(-50 / $i) + vw
+
+                @if($i==2) 
+                    z-index: 2
+
+                animation: cloudMovment calc($moonMovmentTime / 2) linear infinite
+
+    .stars .star 
+        @extend %starCometStyle
+
+        @for $i from 1 through 50 
+            &:nth-child(#{$i}) 
+                left: random(100) + vw
+                top: random(60) + vh
+
+                @extend #{getStarBoxShadow(random(4))}
+
+                animation: starShine+random(2) random(4)+3+s linear infinite
+
+    .comets .comet
+        @extend %starCometStyle
+        @extend %cometShadow
+        background-color: $yellow
+
+        @for $i from 1 through 3 
+            &:nth-child(#{$i}) 
+                top: random(10)+5+vh
+                animation: cometAnimation+$i random(7)+3+s linear infinite
+
+                @media (max-width: 882px) 
+                    animation: cometAnimation+$i random(5)+3+s linear infinite
+
+                @media (max-width: 630px) 
+                    animation: cometAnimation+$i random(3)+2+s linear infinite
+
+                @media (max-width: 410px) 
+                    animation: cometAnimation+$i random(1)+1+s linear infinite
+
+    .comets .reverseComet 
+        @extend %starCometStyle
+        @extend %ReverseCometShadow
+        background-color: $white
+        top: random(15)+5+vh
+        animation: reverseCometAdnimation random(7)+3+s linear infinite
+    
