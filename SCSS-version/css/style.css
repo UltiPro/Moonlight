@@ -1,1 +1,721 @@
-*{margin:0;padding:0}.backgroundMoonlight .comets .reverseComet,.backgroundMoonlight .comets .comet,.backgroundMoonlight .stars .star{position:absolute;width:1px;height:1px;border-radius:1px;background-color:#f1faee;z-index:1}.backgroundMoonlight .stars .star:nth-child(44),.backgroundMoonlight .stars .star:nth-child(42),.backgroundMoonlight .stars .star:nth-child(33),.backgroundMoonlight .stars .star:nth-child(31),.backgroundMoonlight .stars .star:nth-child(23),.backgroundMoonlight .stars .star:nth-child(21),.backgroundMoonlight .stars .star:nth-child(20),.backgroundMoonlight .stars .star:nth-child(16),.backgroundMoonlight .stars .star:nth-child(14),.backgroundMoonlight .stars .star:nth-child(13),.backgroundMoonlight .stars .star:nth-child(7),.backgroundMoonlight .stars .star:nth-child(4){box-shadow:0px 0px 2px 2px rgba(241,250,238,.7)}.backgroundMoonlight .stars .star:nth-child(50),.backgroundMoonlight .stars .star:nth-child(48),.backgroundMoonlight .stars .star:nth-child(47),.backgroundMoonlight .stars .star:nth-child(40),.backgroundMoonlight .stars .star:nth-child(39),.backgroundMoonlight .stars .star:nth-child(36),.backgroundMoonlight .stars .star:nth-child(29),.backgroundMoonlight .stars .star:nth-child(26),.backgroundMoonlight .stars .star:nth-child(11),.backgroundMoonlight .stars .star:nth-child(10),.backgroundMoonlight .stars .star:nth-child(3),.backgroundMoonlight .stars .star:nth-child(1){box-shadow:0px 0px 2px 2px rgba(168,218,220,.7)}.backgroundMoonlight .stars .star:nth-child(41),.backgroundMoonlight .stars .star:nth-child(37),.backgroundMoonlight .stars .star:nth-child(30),.backgroundMoonlight .stars .star:nth-child(28),.backgroundMoonlight .stars .star:nth-child(22),.backgroundMoonlight .stars .star:nth-child(18),.backgroundMoonlight .stars .star:nth-child(17),.backgroundMoonlight .stars .star:nth-child(8),.backgroundMoonlight .stars .star:nth-child(5),.backgroundMoonlight .stars .star:nth-child(2){box-shadow:0px 0px 2px 2px rgba(230,57,70,.7)}.backgroundMoonlight .stars .star:nth-child(49),.backgroundMoonlight .stars .star:nth-child(46),.backgroundMoonlight .stars .star:nth-child(45),.backgroundMoonlight .stars .star:nth-child(43),.backgroundMoonlight .stars .star:nth-child(38),.backgroundMoonlight .stars .star:nth-child(35),.backgroundMoonlight .stars .star:nth-child(34),.backgroundMoonlight .stars .star:nth-child(32),.backgroundMoonlight .stars .star:nth-child(27),.backgroundMoonlight .stars .star:nth-child(25),.backgroundMoonlight .stars .star:nth-child(24),.backgroundMoonlight .stars .star:nth-child(19),.backgroundMoonlight .stars .star:nth-child(15),.backgroundMoonlight .stars .star:nth-child(12),.backgroundMoonlight .stars .star:nth-child(9),.backgroundMoonlight .stars .star:nth-child(6){box-shadow:0px 0px 2px 2px rgba(255,214,10,.7)}.backgroundMoonlight .comets .comet{box-shadow:-2px 0px 2px 2px rgba(241,250,238,.8),-4px 0px 2px 2px rgba(241,250,238,.7),-6px 0px 2px 2px rgba(241,250,238,.6),-8px 0px 2px 2px rgba(241,250,238,.5),-10px 0px 2px 2px rgba(241,250,238,.4),-12px 0px 2px 2px rgba(241,250,238,.3),-14px 0px 2px 2px rgba(241,250,238,.2),-16px 0px 2px 2px rgba(241,250,238,.1)}.backgroundMoonlight .comets .reverseComet{box-shadow:2px 0px 2px 2px rgba(230,57,70,.8),4px 0px 2px 2px rgba(255,195,0,.7),6px 0px 2px 2px rgba(255,195,0,.6),8px 0px 2px 2px rgba(255,195,0,.5),10px 0px 2px 2px rgba(255,214,10,.4),12px 0px 2px 2px rgba(255,214,10,.3),14px 0px 2px 2px rgba(255,214,10,.2),16px 0px 2px 2px rgba(241,250,238,.1)}.backgroundMoonlight .clouds .cloud,.backgroundMoonlight .clouds .cloud::after,.backgroundMoonlight .clouds .cloud::before{background:#f1faee;position:absolute}.backgroundMoonlight .clouds .cloud::after,.backgroundMoonlight .clouds .cloud::before{content:"";border-radius:50%}@keyframes moonShine{0%{box-shadow:0px 0px 20px 5px rgba(241,250,238,.7)}50%{box-shadow:0px 0px 30px 20px rgba(168,218,220,.5)}100%{box-shadow:0px 0px 20px 5px rgba(241,250,238,.7)}}@keyframes moonMovment{0%{transform:translate(-10vw, 35vh)}50%{transform:translate(45vw, 15vh)}100%{transform:translate(110vw, 35vh)}}@keyframes starShine1{from{opacity:1}to{opacity:.3}}@keyframes starShine2{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@keyframes cometAnimation1{0%{transform:translateX(-10vw)}100%{transform:translate(107vw, 3vh)}}@keyframes cometAnimation2{0%{transform:translateX(-10vw)}100%{transform:translate(132vw, 29vh)}}@keyframes cometAnimation3{0%{transform:translateX(-10vw)}100%{transform:translate(164vw, 22vh)}}@keyframes reverseCometAdnimation{0%{transform:translateX(-10vw);transform:translateX(110vw)}100%{transform:translate(-138vw, 27vh);transform:translateX(-100vw)}}@keyframes cloudMovment{100%{transform:translateX(160vw)}}.backgroundMoonlight{position:absolute;left:0;top:0;width:100vw;height:100vh;background:linear-gradient(0deg, #003566 0%, #1d3557 50%, #001d3d 100%);overflow:hidden}.backgroundMoonlight .moon{position:absolute;width:100px;height:100px;background-color:#f1faee;transform:translate(0, -200%);border-radius:50%;animation:moonShine 4s linear infinite,moonMovment 90s ease-in-out infinite;z-index:2}@media(max-width: 882px){.backgroundMoonlight .moon{animation:moonShine 4s linear infinite,moonMovment 45s ease-in-out infinite}}@media(max-width: 630px){.backgroundMoonlight .moon{animation:moonShine 4s linear infinite,moonMovment 30s ease-in-out infinite}}@media(max-width: 410px){.backgroundMoonlight .moon{animation:moonShine 4s linear infinite,moonMovment 22.5s ease-in-out infinite}}.backgroundMoonlight .mountains .mountain{position:absolute;bottom:0;margin-bottom:calc(-50vh - 25px);width:100vh;height:100vh;border-radius:25px;transform:rotate(45deg);box-shadow:0px 1px 30px 0px rgba(0,8,20,.5);z-index:3}.backgroundMoonlight .mountains .mountain:nth-of-type(1){background:linear-gradient(-45deg, #495057 75%, #457b9d 80%, #f1faee 100%)}@media(max-width: 410px){.backgroundMoonlight .mountains .mountain:nth-of-type(1){left:-50%;margin-bottom:calc(-50vh - 175px)}}.backgroundMoonlight .mountains .mountain:nth-of-type(2){left:50%;background:linear-gradient(-45deg, #343a40 85%, #457b9d 90%, #f1faee 100%);margin-bottom:calc(-50vh - 75px)}@media(max-width: 882px){.backgroundMoonlight .mountains .mountain:nth-of-type(2){left:30%;margin-bottom:calc(-50vh - 150px)}}@media(max-width: 630px){.backgroundMoonlight .mountains .mountain:nth-of-type(2){left:-50%}}@media(max-width: 410px){.backgroundMoonlight .mountains .mountain:nth-of-type(2){display:none}}.backgroundMoonlight .mountains .mountain:nth-of-type(3){width:50vh;height:50vh;left:40%;background:linear-gradient(-45deg, #6c757d 85%, #457b9d 90%, #f1faee 100%);margin-bottom:calc(-25vh - 25px)}@media(max-width: 882px){.backgroundMoonlight .mountains .mountain:nth-of-type(3){left:20%}}@media(max-width: 410px){.backgroundMoonlight .mountains .mountain:nth-of-type(3){display:none}}.backgroundMoonlight .clouds .cloud{width:100px;height:33.3333333333px;border-radius:50px;box-shadow:1px 1px rgba(0,0,0,.2);z-index:4}.backgroundMoonlight .clouds .cloud::before{width:50px;height:50px;top:-23.3333333333px;right:13px}.backgroundMoonlight .clouds .cloud::after{width:33.3333333333px;height:33.3333333333px;top:-15px;left:15px}.backgroundMoonlight .clouds .cloud:nth-child(1){top:50vh;left:-50vw;animation:cloudMovment 45s linear infinite}.backgroundMoonlight .clouds .cloud:nth-child(2){top:35vh;left:-25vw;z-index:2;animation:cloudMovment 45s linear infinite}.backgroundMoonlight .stars .star:nth-child(1){left:49vw;top:14vh;animation:starShine2 6s linear infinite}.backgroundMoonlight .stars .star:nth-child(2){left:51vw;top:48vh;animation:starShine2 6s linear infinite}.backgroundMoonlight .stars .star:nth-child(3){left:11vw;top:9vh;animation:starShine2 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(4){left:66vw;top:6vh;animation:starShine2 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(5){left:95vw;top:40vh;animation:starShine1 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(6){left:36vw;top:17vh;animation:starShine1 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(7){left:33vw;top:23vh;animation:starShine2 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(8){left:28vw;top:5vh;animation:starShine2 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(9){left:22vw;top:8vh;animation:starShine1 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(10){left:15vw;top:11vh;animation:starShine2 6s linear infinite}.backgroundMoonlight .stars .star:nth-child(11){left:9vw;top:20vh;animation:starShine2 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(12){left:29vw;top:21vh;animation:starShine1 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(13){left:40vw;top:47vh;animation:starShine1 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(14){left:62vw;top:55vh;animation:starShine1 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(15){left:34vw;top:6vh;animation:starShine2 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(16){left:16vw;top:45vh;animation:starShine2 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(17){left:21vw;top:54vh;animation:starShine1 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(18){left:91vw;top:1vh;animation:starShine2 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(19){left:81vw;top:18vh;animation:starShine1 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(20){left:38vw;top:46vh;animation:starShine1 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(21){left:85vw;top:27vh;animation:starShine2 6s linear infinite}.backgroundMoonlight .stars .star:nth-child(22){left:49vw;top:56vh;animation:starShine1 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(23){left:26vw;top:43vh;animation:starShine2 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(24){left:64vw;top:52vh;animation:starShine1 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(25){left:71vw;top:13vh;animation:starShine1 6s linear infinite}.backgroundMoonlight .stars .star:nth-child(26){left:72vw;top:55vh;animation:starShine1 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(27){left:95vw;top:59vh;animation:starShine2 6s linear infinite}.backgroundMoonlight .stars .star:nth-child(28){left:62vw;top:13vh;animation:starShine2 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(29){left:59vw;top:57vh;animation:starShine2 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(30){left:2vw;top:20vh;animation:starShine2 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(31){left:35vw;top:3vh;animation:starShine1 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(32){left:71vw;top:23vh;animation:starShine2 6s linear infinite}.backgroundMoonlight .stars .star:nth-child(33){left:25vw;top:48vh;animation:starShine1 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(34){left:37vw;top:51vh;animation:starShine2 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(35){left:49vw;top:16vh;animation:starShine2 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(36){left:97vw;top:46vh;animation:starShine1 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(37){left:64vw;top:25vh;animation:starShine2 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(38){left:52vw;top:1vh;animation:starShine1 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(39){left:39vw;top:45vh;animation:starShine2 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(40){left:17vw;top:36vh;animation:starShine1 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(41){left:65vw;top:43vh;animation:starShine1 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(42){left:1vw;top:15vh;animation:starShine2 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(43){left:8vw;top:8vh;animation:starShine2 6s linear infinite}.backgroundMoonlight .stars .star:nth-child(44){left:24vw;top:19vh;animation:starShine1 7s linear infinite}.backgroundMoonlight .stars .star:nth-child(45){left:36vw;top:41vh;animation:starShine1 5s linear infinite}.backgroundMoonlight .stars .star:nth-child(46){left:4vw;top:11vh;animation:starShine2 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(47){left:62vw;top:3vh;animation:starShine2 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(48){left:66vw;top:18vh;animation:starShine2 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(49){left:8vw;top:31vh;animation:starShine1 4s linear infinite}.backgroundMoonlight .stars .star:nth-child(50){left:34vw;top:30vh;animation:starShine1 4s linear infinite}.backgroundMoonlight .comets .comet{background-color:#ffc300}.backgroundMoonlight .comets .comet:nth-child(1){top:11vh;animation:cometAnimation1 7s linear infinite}@media(max-width: 882px){.backgroundMoonlight .comets .comet:nth-child(1){animation:cometAnimation1 8s linear infinite}}@media(max-width: 630px){.backgroundMoonlight .comets .comet:nth-child(1){animation:cometAnimation1 4s linear infinite}}@media(max-width: 410px){.backgroundMoonlight .comets .comet:nth-child(1){animation:cometAnimation1 2s linear infinite}}.backgroundMoonlight .comets .comet:nth-child(2){top:10vh;animation:cometAnimation2 10s linear infinite}@media(max-width: 882px){.backgroundMoonlight .comets .comet:nth-child(2){animation:cometAnimation2 7s linear infinite}}@media(max-width: 630px){.backgroundMoonlight .comets .comet:nth-child(2){animation:cometAnimation2 4s linear infinite}}@media(max-width: 410px){.backgroundMoonlight .comets .comet:nth-child(2){animation:cometAnimation2 2s linear infinite}}.backgroundMoonlight .comets .comet:nth-child(3){top:13vh;animation:cometAnimation3 6s linear infinite}@media(max-width: 882px){.backgroundMoonlight .comets .comet:nth-child(3){animation:cometAnimation3 7s linear infinite}}@media(max-width: 630px){.backgroundMoonlight .comets .comet:nth-child(3){animation:cometAnimation3 3s linear infinite}}@media(max-width: 410px){.backgroundMoonlight .comets .comet:nth-child(3){animation:cometAnimation3 2s linear infinite}}.backgroundMoonlight .comets .reverseComet{background-color:#f1faee;top:10vh;animation:reverseCometAdnimation 4s linear infinite}/*# sourceMappingURL=style.css.map */
+* {
+    margin: 0;
+    padding: 0
+}
+
+.backgroundMoonlight .comets .reverseComet,
+.backgroundMoonlight .comets .comet,
+.backgroundMoonlight .stars .star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 1px;
+    background-color: #f1faee;
+    z-index: 1
+}
+
+.backgroundMoonlight .stars .star:nth-child(48),
+.backgroundMoonlight .stars .star:nth-child(40),
+.backgroundMoonlight .stars .star:nth-child(36),
+.backgroundMoonlight .stars .star:nth-child(33),
+.backgroundMoonlight .stars .star:nth-child(18),
+.backgroundMoonlight .stars .star:nth-child(6),
+.backgroundMoonlight .stars .star:nth-child(2),
+.backgroundMoonlight .stars .star:nth-child(1) {
+    box-shadow: 0px 0px 2px 2px rgba(241, 250, 238, .7)
+}
+
+.backgroundMoonlight .stars .star:nth-child(43),
+.backgroundMoonlight .stars .star:nth-child(42),
+.backgroundMoonlight .stars .star:nth-child(38),
+.backgroundMoonlight .stars .star:nth-child(34),
+.backgroundMoonlight .stars .star:nth-child(32),
+.backgroundMoonlight .stars .star:nth-child(29),
+.backgroundMoonlight .stars .star:nth-child(28),
+.backgroundMoonlight .stars .star:nth-child(26),
+.backgroundMoonlight .stars .star:nth-child(24),
+.backgroundMoonlight .stars .star:nth-child(23),
+.backgroundMoonlight .stars .star:nth-child(21),
+.backgroundMoonlight .stars .star:nth-child(11),
+.backgroundMoonlight .stars .star:nth-child(10),
+.backgroundMoonlight .stars .star:nth-child(8),
+.backgroundMoonlight .stars .star:nth-child(7),
+.backgroundMoonlight .stars .star:nth-child(5),
+.backgroundMoonlight .stars .star:nth-child(3) {
+    box-shadow: 0px 0px 2px 2px rgba(168, 218, 220, .7)
+}
+
+.backgroundMoonlight .stars .star:nth-child(49),
+.backgroundMoonlight .stars .star:nth-child(39),
+.backgroundMoonlight .stars .star:nth-child(37),
+.backgroundMoonlight .stars .star:nth-child(31),
+.backgroundMoonlight .stars .star:nth-child(30),
+.backgroundMoonlight .stars .star:nth-child(27),
+.backgroundMoonlight .stars .star:nth-child(25),
+.backgroundMoonlight .stars .star:nth-child(19),
+.backgroundMoonlight .stars .star:nth-child(17),
+.backgroundMoonlight .stars .star:nth-child(15),
+.backgroundMoonlight .stars .star:nth-child(13),
+.backgroundMoonlight .stars .star:nth-child(9) {
+    box-shadow: 0px 0px 2px 2px rgba(230, 57, 70, .7)
+}
+
+.backgroundMoonlight .stars .star:nth-child(50),
+.backgroundMoonlight .stars .star:nth-child(47),
+.backgroundMoonlight .stars .star:nth-child(46),
+.backgroundMoonlight .stars .star:nth-child(45),
+.backgroundMoonlight .stars .star:nth-child(44),
+.backgroundMoonlight .stars .star:nth-child(41),
+.backgroundMoonlight .stars .star:nth-child(35),
+.backgroundMoonlight .stars .star:nth-child(22),
+.backgroundMoonlight .stars .star:nth-child(20),
+.backgroundMoonlight .stars .star:nth-child(16),
+.backgroundMoonlight .stars .star:nth-child(14),
+.backgroundMoonlight .stars .star:nth-child(12),
+.backgroundMoonlight .stars .star:nth-child(4) {
+    box-shadow: 0px 0px 2px 2px rgba(255, 214, 10, .7)
+}
+
+.backgroundMoonlight .comets .comet {
+    box-shadow: -2px 0px 2px 2px rgba(241, 250, 238, .8), -4px 0px 2px 2px rgba(241, 250, 238, .7), -6px 0px 2px 2px rgba(241, 250, 238, .6), -8px 0px 2px 2px rgba(241, 250, 238, .5), -10px 0px 2px 2px rgba(241, 250, 238, .4), -12px 0px 2px 2px rgba(241, 250, 238, .3), -14px 0px 2px 2px rgba(241, 250, 238, .2), -16px 0px 2px 2px rgba(241, 250, 238, .1)
+}
+
+.backgroundMoonlight .comets .reverseComet {
+    box-shadow: 2px 0px 2px 2px rgba(230, 57, 70, .8), 4px 0px 2px 2px rgba(255, 195, 0, .7), 6px 0px 2px 2px rgba(255, 195, 0, .6), 8px 0px 2px 2px rgba(255, 195, 0, .5), 10px 0px 2px 2px rgba(255, 214, 10, .4), 12px 0px 2px 2px rgba(255, 214, 10, .3), 14px 0px 2px 2px rgba(255, 214, 10, .2), 16px 0px 2px 2px rgba(241, 250, 238, .1)
+}
+
+.backgroundMoonlight .clouds .cloud,
+.backgroundMoonlight .clouds .cloud::after,
+.backgroundMoonlight .clouds .cloud::before {
+    background: #f1faee;
+    position: absolute
+}
+
+.backgroundMoonlight .clouds .cloud::after,
+.backgroundMoonlight .clouds .cloud::before {
+    content: "";
+    border-radius: 50%
+}
+
+@keyframes moonShine {
+    0% {
+        box-shadow: 0px 0px 20px 5px rgba(241, 250, 238, .7)
+    }
+
+    50% {
+        box-shadow: 0px 0px 30px 20px rgba(168, 218, 220, .5)
+    }
+
+    100% {
+        box-shadow: 0px 0px 20px 5px rgba(241, 250, 238, .7)
+    }
+}
+
+@keyframes moonMovment {
+    0% {
+        transform: translate(-10vw, 35vh)
+    }
+
+    50% {
+        transform: translate(45vw, 15vh)
+    }
+
+    100% {
+        transform: translate(110vw, 35vh)
+    }
+}
+
+@keyframes starShine1 {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: .3
+    }
+}
+
+@keyframes starShine2 {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes cometAnimation1 {
+    0% {
+        transform: translateX(-10vw)
+    }
+
+    100% {
+        transform: translate(114vw, 21vh)
+    }
+}
+
+@keyframes cometAnimation2 {
+    0% {
+        transform: translateX(-10vw)
+    }
+
+    100% {
+        transform: translate(143vw, 38vh)
+    }
+}
+
+@keyframes cometAnimation3 {
+    0% {
+        transform: translateX(-10vw)
+    }
+
+    100% {
+        transform: translate(115vw, 29vh)
+    }
+}
+
+@keyframes reverseCometAdnimation {
+    0% {
+        transform: translateX(-10vw);
+        transform: translateX(110vw)
+    }
+
+    100% {
+        transform: translate(-167vw, 19vh);
+        transform: translateX(-100vw)
+    }
+}
+
+@keyframes cloudMovment {
+    100% {
+        transform: translateX(160vw)
+    }
+}
+
+.backgroundMoonlight {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, #003566 0%, #1d3557 50%, #001d3d 100%);
+    overflow: hidden
+}
+
+.backgroundMoonlight .moon {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #f1faee;
+    transform: translate(0, -200%);
+    border-radius: 50%;
+    animation: moonShine 4s linear infinite, moonMovment 90s ease-in-out infinite;
+    z-index: 2
+}
+
+@media(max-width: 882px) {
+    .backgroundMoonlight .moon {
+        animation: moonShine 4s linear infinite, moonMovment 45s ease-in-out infinite
+    }
+}
+
+@media(max-width: 630px) {
+    .backgroundMoonlight .moon {
+        animation: moonShine 4s linear infinite, moonMovment 30s ease-in-out infinite
+    }
+}
+
+@media(max-width: 410px) {
+    .backgroundMoonlight .moon {
+        animation: moonShine 4s linear infinite, moonMovment 22.5s ease-in-out infinite
+    }
+}
+
+.backgroundMoonlight .mountains .mountain {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: calc(-50vh - 25px);
+    width: 100vh;
+    height: 100vh;
+    border-radius: 25px;
+    transform: rotate(45deg);
+    box-shadow: 0px 1px 30px 0px rgba(0, 8, 20, .5);
+    z-index: 3
+}
+
+.backgroundMoonlight .mountains .mountain:nth-of-type(1) {
+    background: linear-gradient(-45deg, #495057 75%, #457b9d 80%, #f1faee 100%)
+}
+
+@media(max-width: 410px) {
+    .backgroundMoonlight .mountains .mountain:nth-of-type(1) {
+        left: -50%;
+        margin-bottom: calc(-50vh - 175px)
+    }
+}
+
+.backgroundMoonlight .mountains .mountain:nth-of-type(2) {
+    left: 50%;
+    background: linear-gradient(-45deg, #343a40 85%, #457b9d 90%, #f1faee 100%);
+    margin-bottom: calc(-50vh - 75px)
+}
+
+@media(max-width: 882px) {
+    .backgroundMoonlight .mountains .mountain:nth-of-type(2) {
+        left: 30%;
+        margin-bottom: calc(-50vh - 150px)
+    }
+}
+
+@media(max-width: 630px) {
+    .backgroundMoonlight .mountains .mountain:nth-of-type(2) {
+        left: -50%
+    }
+}
+
+@media(max-width: 410px) {
+    .backgroundMoonlight .mountains .mountain:nth-of-type(2) {
+        display: none
+    }
+}
+
+.backgroundMoonlight .mountains .mountain:nth-of-type(3) {
+    width: 50vh;
+    height: 50vh;
+    left: 40%;
+    background: linear-gradient(-45deg, #6c757d 85%, #457b9d 90%, #f1faee 100%);
+    margin-bottom: calc(-25vh - 25px)
+}
+
+@media(max-width: 882px) {
+    .backgroundMoonlight .mountains .mountain:nth-of-type(3) {
+        left: 20%
+    }
+}
+
+@media(max-width: 410px) {
+    .backgroundMoonlight .mountains .mountain:nth-of-type(3) {
+        display: none
+    }
+}
+
+.backgroundMoonlight .clouds .cloud {
+    width: 100px;
+    height: 33.3333333333px;
+    border-radius: 50px;
+    box-shadow: 1px 1px rgba(0, 0, 0, .2);
+    z-index: 4
+}
+
+.backgroundMoonlight .clouds .cloud::before {
+    width: 50px;
+    height: 50px;
+    top: -23.3333333333px;
+    right: 13px
+}
+
+.backgroundMoonlight .clouds .cloud::after {
+    width: 33.3333333333px;
+    height: 33.3333333333px;
+    top: -15px;
+    left: 15px
+}
+
+.backgroundMoonlight .clouds .cloud:nth-child(1) {
+    top: 50vh;
+    left: -50vw;
+    animation: cloudMovment 45s linear infinite
+}
+
+.backgroundMoonlight .clouds .cloud:nth-child(2) {
+    top: 35vh;
+    left: -25vw;
+    z-index: 2;
+    animation: cloudMovment 45s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(1) {
+    left: 14vw;
+    top: 18vh;
+    animation: starShine1 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(2) {
+    left: 83vw;
+    top: 48vh;
+    animation: starShine2 6s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(3) {
+    left: 51vw;
+    top: 53vh;
+    animation: starShine2 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(4) {
+    left: 56vw;
+    top: 1vh;
+    animation: starShine1 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(5) {
+    left: 95vw;
+    top: 45vh;
+    animation: starShine2 4s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(6) {
+    left: 22vw;
+    top: 6vh;
+    animation: starShine2 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(7) {
+    left: 92vw;
+    top: 51vh;
+    animation: starShine2 4s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(8) {
+    left: 30vw;
+    top: 31vh;
+    animation: starShine1 4s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(9) {
+    left: 17vw;
+    top: 56vh;
+    animation: starShine2 6s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(10) {
+    left: 48vw;
+    top: 30vh;
+    animation: starShine2 4s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(11) {
+    left: 14vw;
+    top: 55vh;
+    animation: starShine1 6s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(12) {
+    left: 39vw;
+    top: 43vh;
+    animation: starShine1 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(13) {
+    left: 5vw;
+    top: 59vh;
+    animation: starShine1 4s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(14) {
+    left: 85vw;
+    top: 6vh;
+    animation: starShine2 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(15) {
+    left: 10vw;
+    top: 6vh;
+    animation: starShine2 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(16) {
+    left: 87vw;
+    top: 32vh;
+    animation: starShine1 6s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(17) {
+    left: 74vw;
+    top: 27vh;
+    animation: starShine2 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(18) {
+    left: 35vw;
+    top: 26vh;
+    animation: starShine1 4s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(19) {
+    left: 38vw;
+    top: 38vh;
+    animation: starShine1 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(20) {
+    left: 63vw;
+    top: 10vh;
+    animation: starShine2 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(21) {
+    left: 49vw;
+    top: 46vh;
+    animation: starShine1 4s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(22) {
+    left: 88vw;
+    top: 27vh;
+    animation: starShine1 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(23) {
+    left: 99vw;
+    top: 25vh;
+    animation: starShine2 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(24) {
+    left: 25vw;
+    top: 6vh;
+    animation: starShine1 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(25) {
+    left: 4vw;
+    top: 56vh;
+    animation: starShine1 6s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(26) {
+    left: 8vw;
+    top: 9vh;
+    animation: starShine1 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(27) {
+    left: 28vw;
+    top: 53vh;
+    animation: starShine1 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(28) {
+    left: 24vw;
+    top: 40vh;
+    animation: starShine2 4s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(29) {
+    left: 81vw;
+    top: 36vh;
+    animation: starShine2 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(30) {
+    left: 58vw;
+    top: 49vh;
+    animation: starShine1 6s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(31) {
+    left: 79vw;
+    top: 15vh;
+    animation: starShine1 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(32) {
+    left: 95vw;
+    top: 58vh;
+    animation: starShine1 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(33) {
+    left: 60vw;
+    top: 31vh;
+    animation: starShine2 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(34) {
+    left: 98vw;
+    top: 6vh;
+    animation: starShine1 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(35) {
+    left: 10vw;
+    top: 58vh;
+    animation: starShine2 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(36) {
+    left: 17vw;
+    top: 55vh;
+    animation: starShine2 4s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(37) {
+    left: 92vw;
+    top: 52vh;
+    animation: starShine1 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(38) {
+    left: 63vw;
+    top: 20vh;
+    animation: starShine2 6s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(39) {
+    left: 44vw;
+    top: 58vh;
+    animation: starShine1 6s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(40) {
+    left: 46vw;
+    top: 5vh;
+    animation: starShine1 6s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(41) {
+    left: 95vw;
+    top: 47vh;
+    animation: starShine2 4s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(42) {
+    left: 86vw;
+    top: 55vh;
+    animation: starShine1 4s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(43) {
+    left: 30vw;
+    top: 15vh;
+    animation: starShine1 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(44) {
+    left: 69vw;
+    top: 5vh;
+    animation: starShine2 7s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(45) {
+    left: 12vw;
+    top: 7vh;
+    animation: starShine2 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(46) {
+    left: 11vw;
+    top: 29vh;
+    animation: starShine1 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(47) {
+    left: 99vw;
+    top: 47vh;
+    animation: starShine1 5s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(48) {
+    left: 23vw;
+    top: 34vh;
+    animation: starShine2 6s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(49) {
+    left: 78vw;
+    top: 51vh;
+    animation: starShine1 4s linear infinite
+}
+
+.backgroundMoonlight .stars .star:nth-child(50) {
+    left: 94vw;
+    top: 44vh;
+    animation: starShine2 7s linear infinite
+}
+
+.backgroundMoonlight .comets .comet {
+    background-color: #ffc300
+}
+
+.backgroundMoonlight .comets .comet:nth-child(1) {
+    top: 13vh;
+    animation: cometAnimation1 6s linear infinite
+}
+
+@media(max-width: 882px) {
+    .backgroundMoonlight .comets .comet:nth-child(1) {
+        animation: cometAnimation1 6s linear infinite
+    }
+}
+
+@media(max-width: 630px) {
+    .backgroundMoonlight .comets .comet:nth-child(1) {
+        animation: cometAnimation1 3s linear infinite
+    }
+}
+
+@media(max-width: 410px) {
+    .backgroundMoonlight .comets .comet:nth-child(1) {
+        animation: cometAnimation1 2s linear infinite
+    }
+}
+
+.backgroundMoonlight .comets .comet:nth-child(2) {
+    top: 10vh;
+    animation: cometAnimation2 5s linear infinite
+}
+
+@media(max-width: 882px) {
+    .backgroundMoonlight .comets .comet:nth-child(2) {
+        animation: cometAnimation2 5s linear infinite
+    }
+}
+
+@media(max-width: 630px) {
+    .backgroundMoonlight .comets .comet:nth-child(2) {
+        animation: cometAnimation2 3s linear infinite
+    }
+}
+
+@media(max-width: 410px) {
+    .backgroundMoonlight .comets .comet:nth-child(2) {
+        animation: cometAnimation2 2s linear infinite
+    }
+}
+
+.backgroundMoonlight .comets .comet:nth-child(3) {
+    top: 7vh;
+    animation: cometAnimation3 8s linear infinite
+}
+
+@media(max-width: 882px) {
+    .backgroundMoonlight .comets .comet:nth-child(3) {
+        animation: cometAnimation3 4s linear infinite
+    }
+}
+
+@media(max-width: 630px) {
+    .backgroundMoonlight .comets .comet:nth-child(3) {
+        animation: cometAnimation3 3s linear infinite
+    }
+}
+
+@media(max-width: 410px) {
+    .backgroundMoonlight .comets .comet:nth-child(3) {
+        animation: cometAnimation3 2s linear infinite
+    }
+}
+
+.backgroundMoonlight .comets .reverseComet {
+    background-color: #f1faee;
+    top: 19vh;
+    animation: reverseCometAdnimation 5s linear infinite
+}
+
+/*# sourceMappingURL=style.css.map */
