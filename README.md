@@ -1,8 +1,8 @@
 # Moonlight
-Project Moonlight in SCSS and SASS by Patryk 'UltiPro' Wójtowicz.
+Moonlight created by Patryk 'UltiPro' Wójtowicz using HTML and SCSS/SASS.
 
-Just download and enjoy :>
+Simple animation.
 
-## Short preview of animation 
+# Preview
 
-![Gif animation](Moonlight.gif)
+![Moonlight preview gif](Moonlight.gif)
